@@ -15,6 +15,12 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  # allows you to change the way you invoke FactoryGirl from this:
+  # FactoryGirl.build(:contact)
+  # to this: create(:contact)
+  # !!!!!!! config.include FactoryGirl::Syntax::Methods
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -82,4 +88,5 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
 end
