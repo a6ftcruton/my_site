@@ -6,4 +6,10 @@ FactoryGirl.define do
     body "Post body text goes in here, maybe with an image as well."
     category_id 1
   end
+
+  factory :invalid_post do
+    title nil
+    body "Some post body in here"
+    category_id 1
+  end
 end
